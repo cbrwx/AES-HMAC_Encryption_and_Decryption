@@ -56,6 +56,20 @@ This code uses AES with CBC mode and HMAC for encryption and message integrity v
 # Contributing
 Contributions are welcome! If you find a bug or have a feature request, please open an issue or submit a pull request.
 
+# Improving the code
+
+- Use a more secure method to generate the salt. The os.urandom() function is used to generate the salt, but there are more secure methods available such as using a hardware random number generator.
+
+- Use a stronger key derivation function. PBKDF2 is a widely-used key derivation function, but it is not the strongest available. The newer Argon2 and scrypt functions are considered more secure.
+
+- Use authenticated encryption. The current code uses a HMAC to ensure integrity of the ciphertext, but authenticated encryption algorithms such as AES-GCM and AES-CCM can provide both confidentiality and integrity in a single step.
+
+- Consider using a different mode of operation. The current code uses AES-CBC, which is vulnerable to padding oracle attacks. Other modes such as AES-GCM and AES-CCM can provide better security.
+
+- Implement proper error handling. The current code does not have proper error handling, which can lead to security vulnerabilities and crashes. Proper error handling should be implemented to ensure that the code can handle unexpected inputs and exceptions.
+
+And as always; ensure that the key and salt are kept secure. The key and salt must be kept secure to ensure that an attacker cannot derive the key and access the encrypted data. This can be achieved by storing the key and salt separately from the encrypted data, and by using a secure key management system.
+
 # License
 This code is released under the MIT License. See LICENSE for more information.
 
