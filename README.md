@@ -16,8 +16,8 @@ from aes_hmac import aes_encrypt, aes_decrypt
 The aes_encrypt function takes two arguments: plaintext and password. It returns a tuple of four values: ciphertext, iv, salt, and mac. These values are required for decryption.
 
 ```
-plaintext = "Hello, world!"
-password = "mysecretpassword"
+plaintext = "Secret delicious message"
+password = "password"
 
 encrypted_data = aes_encrypt(plaintext, password)
 ciphertext, iv, salt, mac = encrypted_data
