@@ -44,10 +44,10 @@ The encryption process involves the following steps:
 The decryption process involves the following steps:
 
 - Decode the ciphertext from base64.
--Derive a key from the password and salt using PBKDF2.
--Verify the HMAC of the encoded ciphertext using the key.
--Decrypt the ciphertext using AES with CBC mode and the key and IV.
--Unpad the plaintext using PKCS7 padding.
+- Derive a key from the password and salt using PBKDF2.
+- Verify the HMAC of the encoded ciphertext using the key.
+- Decrypt the ciphertext using AES with CBC mode and the key and IV.
+- Unpad the plaintext using PKCS7 padding.
 
 # Security Considerations
 
